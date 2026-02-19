@@ -81,7 +81,7 @@
                         <p class="text-center">Jos sinulla on kysyttävää tai haluat varata pöydän tai tapahtuman,
                             täytä alla oleva lomake.
                         </p>
-                        
+
                         <!-- viestin vahvistus -->
                         <div id="formAlert" class="alert alert-success d-none" role="alert">
                             Kiitos viestistäsi! Otamme sinuun yhteyttä mahdollisimman pian.
@@ -91,15 +91,18 @@
                             <!-- Lomakekentät -->
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nimesi</label>
-                                <input type="text" class="form-control" id="name" placeholder="Kirjoita nimesi" required>
+                                <input type="text" class="form-control" id="name" placeholder="Kirjoita nimesi"
+                                    required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Sähköpostisi</label>
-                                <input type="email" class="form-control" id="email" placeholder="esim. nimi@sahko.fi" required>
+                                <input type="email" class="form-control" id="email" placeholder="esim. nimi@sahko.fi"
+                                    required>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Viesti</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Kirjoita viestisi tähän..." required></textarea>
+                                <textarea class="form-control" id="message" rows="5"
+                                    placeholder="Kirjoita viestisi tähän..." required></textarea>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-dark">Lähetä viesti</button>
@@ -129,33 +132,33 @@
         </div>
     </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Optional: Back to top button – only run if the button exists
-    const backToTop = document.getElementById('backToTop');
-    if (backToTop) {
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Optional: Back to top button – only run if the button exists
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
 
-    // Yhteydenottolomakkeen lähetyksen vahvistus
-    const contactForm = document.getElementById('contactForm');
-    const formAlert = document.getElementById('formAlert');
+            // Yhteydenottolomakkeen lähetyksen vahvistus
+            const contactForm = document.getElementById('contactForm');
+            const formAlert = document.getElementById('formAlert');
 
-    if (contactForm && formAlert) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();                // estää sivun uudelleenlatauksen
-            formAlert.classList.remove('d-none'); // näyttää alertin
-            formAlert.scrollIntoView({ behavior: 'smooth' }); // skrollaa alertiin
-            contactForm.reset();                // tyhjentää lomakkeen
+            if (contactForm && formAlert) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();                // estää sivun uudelleenlatauksen
+                    formAlert.classList.remove('d-none'); // näyttää alertin
+                    formAlert.scrollIntoView({ behavior: 'smooth' }); // skrollaa alertiin
+                    contactForm.reset();                // tyhjentää lomakkeen
+                });
+            }
         });
-    }
-});
-</script>
+    </script>
 </body>
 
 </html>
