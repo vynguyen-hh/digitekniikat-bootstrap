@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body id="top"><!-- id="top" tarvitaan takaisin alkuun -painikkeelle -->
+<body id="top" class="contact-page"><!-- id="top" tarvitaan takaisin alkuun -painikkeelle -->
 
     <!-- Navigaatio (responsiivinen, sisältää hampurilaisvalikon) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
@@ -44,6 +44,72 @@
     </nav>
 
     <!-- Hero-osio -->
+    <header class="bg-light text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Yhteystiedot</h1>
+            <p class="lead">Ota meihin yhteyttä tai varaa pöytä!</p>
+        </div>
+    </header>
+
+    <!-- Yhteystietojen osio -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Ota yhteyttä</h2>
+
+            <!-- Kontaktitiedot -->
+            <div class="row text-center mb-5">
+                <div class="col-md-4 mb-3">
+                    <h5>Puhelin</h5>
+                    <p>+358 40 123 4567</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Sähköposti</h5>
+                    <p>info@caferosaline.fi</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Instagram</h5>
+                    <p><a href="https://www.instagram.com" target="_blank"
+                            class="text-decoration-none">@caferosaline</a></p>
+                </div>
+            </div>
+
+            <!-- Yhteydenottolomake -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-sm p-4">
+                        <h3 class="mb-3 text-center">Lähetä viesti</h3>
+                        <p class="text-center">Jos sinulla on kysyttävää tai haluat varata pöydän tai tapahtuman,
+                            täytä alla oleva lomake.
+                        </p>
+                        
+                        <!-- viestin vahvistus -->
+                        <div id="formAlert" class="alert alert-success d-none" role="alert">
+                            Kiitos viestistäsi! Otamme sinuun yhteyttä mahdollisimman pian.
+                        </div>
+
+                        <form id="contactForm">
+                            <!-- Lomakekentät -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nimesi</label>
+                                <input type="text" class="form-control" id="name" placeholder="Kirjoita nimesi" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Sähköpostisi</label>
+                                <input type="email" class="form-control" id="email" placeholder="esim. nimi@sahko.fi" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Viesti</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Kirjoita viestisi tähän..." required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-dark">Lähetä viesti</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Aukioloajat -->
@@ -63,18 +129,33 @@
         </div>
     </footer>
 
-    <!-- Extra Bootstrap-ominaisuus: Takaisin alkuun -painike -->
-    <button id="backToTop" class="btn btn-dark position-fixed" style="bottom: 20px; right: 20px; z-index: 9999;">↑
-        Takaisin alkuun</button>
-    <script>
-        const backToTop = document.getElementById('backToTop');
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Optional: Back to top button – only run if the button exists
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
         backToTop.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-    </script>
+    }
+
+    // Yhteydenottolomakkeen lähetyksen vahvistus
+    const contactForm = document.getElementById('contactForm');
+    const formAlert = document.getElementById('formAlert');
+
+    if (contactForm && formAlert) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();                // estää sivun uudelleenlatauksen
+            formAlert.classList.remove('d-none'); // näyttää alertin
+            formAlert.scrollIntoView({ behavior: 'smooth' }); // skrollaa alertiin
+            contactForm.reset();                // tyhjentää lomakkeen
+        });
+    }
+});
+</script>
 </body>
 
 </html>

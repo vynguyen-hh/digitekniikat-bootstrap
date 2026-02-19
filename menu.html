@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body id="top"><!-- id="top" tarvitaan takaisin alkuun -painikkeelle -->
+<body id="top" class="menu-page"><!-- id="top" tarvitaan takaisin alkuun -painikkeelle -->
 
     <!-- Navigaatio (responsiivinen, sisältää hampurilaisvalikon) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
@@ -57,17 +57,21 @@
             <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/coffee1.jpg" class="d-block w-100" alt="Erikoiskahvi">
+                        <img src="erikoiskahvi.jpg" class="d-block w-100" alt="Erikoiskahvi">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Erikoiskahvit</h5>
-                            <p>Valikoituja kahvipapuja ympäri maailmaa</p>
+                            <div class="caption-overlay">
+                                <h5>Erikoiskahvit</h5>
+                                <p>Valikoituja kahvipapuja ympäri maailmaa</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="images/pastry1.jpg" class="d-block w-100" alt="Leivonnaiset">
+                    <div class="carousel-item active">
+                        <img src="leivonnaiset.jpg" class="d-block w-100" alt="Leivonnaiset">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Tuoreet leivonnaiset</h5>
-                            <p>Joka päivä paikan päällä leivottua</p>
+                            <div class="caption-overlay">
+                                <h5>Tuoreet leivonnaiset</h5>
+                                <p>Joka päivä paikan päällä leivottua</p>
+                            </div>
                         </div>
                     </div>
                 </div>

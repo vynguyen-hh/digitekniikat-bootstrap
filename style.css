@@ -11,23 +11,19 @@ body {
 /* Navigaatio */
 .navbar {
     background-color: #FBF5F3;
-    /* Snow navbar */
 }
 
 .nav-link,
 .navbar-brand {
     color: #0D160B !important;
-    /* Onyx black tekstit */
 }
 
-/* Intro-taustakuva ennen Heroa */
+/* Intro-taustakuva ennen Hero-osioa */
 .intro-bg {
     background-image: url('taustakuva_cafe\ image.jpg');
     /* oma taustakuva */
     background-size: cover;
-    /* peittää koko osion */
     height: 90vh;
-    /* osion korkeus */
     min-height: 300px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -56,78 +52,105 @@ body {
 /* Hero-osio */
 header {
     background-color: #FBF5F3;
-    /* Snow */
     color: #0D160B;
-    /* Onyx black */
 }
 
-/* Kortit (cards) */
+/* Kortit */
 .card {
     border: 2px solid #A57982;
-    /* Dusty mauve border */
 }
 
 .card-title,
 .card-text {
     color: #0D160B;
-    /* Onyx black text */
 }
 
-/* Accordion (haitari) */
+/* Haitari */
 .accordion-button {
     background-color: #FBF5F3;
-    /* Snow */
     color: #0D160B;
-    /* Onyx black */
 }
 
 .accordion-button:not(.collapsed) {
     background-color: #A57982;
-    /* Dusty mauve active highlight */
     color: #FBF5F3;
-    /* Snow text when active */
 }
 
 /* Taulukko */
 .table {
     border: 2px solid #A57982;
-    /* Dusty mauve border around table */
 }
 
 .table th,
 .table td {
     color: #0D160B;
-    /* Onyx black text */
 }
 
 /* Footer */
 footer {
     background-color: #FBF5F3;
-    /* Snow */
     color: #0D160B;
-    /* Onyx black */
 }
 
-/* Buttons */
+/* Painikkeet */
 .btn-dark {
     background-color: #A57982;
-    /* Dusty mauve */
     border-color: #A57982;
     color: #FBF5F3;
-    /* Snow text */
 }
 
 .btn-dark:hover {
     background-color: #0D160B;
-    /* On hover: Onyx black */
     color: #FBF5F3;
 }
 
-/* Carousel captions */
+/* Kuvakaruselli */
 .carousel-caption h5,
 .carousel-caption p {
     color: #0D160B;
-    /* Onyx black captions */
+}
+
+.menu-page .carousel-item img {
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* Mobiilissa pienempi korkeus */
+@media (max-width: 768px) {
+    .menu-page .carousel-item img {
+        max-height: 250px;
+        /* pienempi korkeus puhelimissa */
+    }
+}
+
+/* Carousel caption overlay */
+.carousel-caption .caption-overlay {
+    background-color: rgba(13, 22, 11, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    width: 50%;
+    display: inline-block;
+}
+
+/* Tekstin väri */
+.carousel-caption .caption-overlay h5,
+.carousel-caption .caption-overlay p {
+    color: #FBF5F3;
+    margin: 0;
+}
+
+/* Responsiivisuus mobiilissa */
+@media (max-width: 768px) {
+    .carousel-caption .caption-overlay h5 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption .caption-overlay p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Toast */
@@ -135,13 +158,11 @@ footer {
     background-color: #A57982;
     /* Dusty mauve */
     color: #FBF5F3;
-    /* Snow text */
 }
 
 /* Takaisin alkuun -painike */
 #backToTop {
     background-color: #A57982;
-    /* Dusty mauve */
     color: #FBF5F3;
 }
 
