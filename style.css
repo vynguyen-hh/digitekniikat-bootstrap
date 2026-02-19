@@ -1,0 +1,122 @@
+/* =====================================
+   Yleiset tyylit
+   ===================================== */
+
+/* Taustaväri koko sivustolle */
+body {
+    background-color: #FBF5F3;
+    /* Snow */
+    color: #0D160B;
+    /* Onyx black */
+    font-family: 'Baskerville', serif;
+    /* Valittu fontti */
+}
+
+/* Navigaatio */
+.navbar {
+    background-color: #FBF5F3;
+    /* Light snow navbar */
+}
+
+.nav-link,
+.navbar-brand {
+    color: #0D160B !important;
+    /* Onyx black tekstit */
+}
+
+/* Hero-osio */
+header {
+    background-color: #FBF5F3;
+    /* Snow */
+    color: #0D160B;
+    /* Onyx black */
+}
+
+/* Kortit (cards) */
+.card {
+    border: 2px solid #A57982;
+    /* Dusty mauve border */
+}
+
+.card-title,
+.card-text {
+    color: #0D160B;
+    /* Onyx black text */
+}
+
+/* Accordion (haitari) */
+.accordion-button {
+    background-color: #FBF5F3;
+    /* Snow */
+    color: #0D160B;
+    /* Onyx black */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #A57982;
+    /* Dusty mauve active highlight */
+    color: #FBF5F3;
+    /* Snow text when active */
+}
+
+/* Taulukko */
+.table {
+    border: 2px solid #A57982;
+    /* Dusty mauve border around table */
+}
+
+.table th,
+.table td {
+    color: #0D160B;
+    /* Onyx black text */
+}
+
+/* Footer */
+footer {
+    background-color: #FBF5F3;
+    /* Snow */
+    color: #0D160B;
+    /* Onyx black */
+}
+
+/* Buttons */
+.btn-dark {
+    background-color: #A57982;
+    /* Dusty mauve */
+    border-color: #A57982;
+    color: #FBF5F3;
+    /* Snow text */
+}
+
+.btn-dark:hover {
+    background-color: #0D160B;
+    /* On hover: Onyx black */
+    color: #FBF5F3;
+}
+
+/* Carousel captions */
+.carousel-caption h5,
+.carousel-caption p {
+    color: #0D160B;
+    /* Onyx black captions */
+}
+
+/* Toast */
+.toast {
+    background-color: #A57982;
+    /* Dusty mauve */
+    color: #FBF5F3;
+    /* Snow text */
+}
+
+/* Takaisin alkuun -painike */
+#backToTop {
+    background-color: #A57982;
+    /* Dusty mauve */
+    color: #FBF5F3;
+}
+
+#backToTop:hover {
+    background-color: #0D160B;
+    color: #FBF5F3;
+}
