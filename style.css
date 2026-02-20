@@ -43,8 +43,8 @@ body {
 
 .overlay-text {
     position: absolute;
-    color: #FBF5F3;
-    z-index: 2;
+    color: #ffffff;
+    z-index: 5;
     max-width: 90%;
     text-align: center;
 }
@@ -73,7 +73,7 @@ header {
 
 .accordion-button:not(.collapsed) {
     background-color: #A57982;
-    color: #FBF5F3;
+    color: #0D160B;
 }
 
 /* Taulukko */
@@ -94,9 +94,9 @@ footer {
 
 /* Painikkeet */
 .btn-dark {
-    background-color: #A57982;
-    border-color: #A57982;
-    color: #FBF5F3;
+    background-color: #975C68;
+    border-color: #975C68;
+    color: #ffffff;
 }
 
 .btn-dark:hover {
@@ -126,7 +126,7 @@ footer {
     }
 }
 
-/* Carousel caption overlay */
+/* Karusellin kuvatekstin overlay */
 .carousel-caption .caption-overlay {
     background-color: rgba(13, 22, 11, 0.5);
     padding: 0.5rem 1rem;
@@ -138,7 +138,7 @@ footer {
 /* Tekstin väri */
 .carousel-caption .caption-overlay h5,
 .carousel-caption .caption-overlay p {
-    color: #FBF5F3;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -155,20 +155,20 @@ footer {
 
 /* Toast */
 .toast {
-    background-color: #A57982;
+    background-color: #975C68;
     /* Dusty mauve */
-    color: #FBF5F3;
+    color: #ffffff;
 }
 
 /* Takaisin alkuun -painike */
 #backToTop {
-    background-color: #A57982;
-    color: #FBF5F3;
+    background-color: #975C68;
+    color: #ffffff;
 }
 
 #backToTop:hover {
     background-color: #0D160B;
-    color: #FBF5F3;
+    color: #ffffff;
 }
 
 
