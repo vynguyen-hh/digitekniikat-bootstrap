@@ -18,10 +18,12 @@ body {
     font: 10.8rem;
     color: #0D160B !important;
 }
+
 @media (max-width: 768px) {
     .navbar-brand {
         font-size: 1.3rem;
     }
+
     .navbar-nav .nav-link {
         font-size: 1rem;
     }
@@ -30,12 +32,12 @@ body {
 
 /* Intro-taustakuva ennen Hero-osioa */
 .intro-bg {
-    background: 
-        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
         url('taustakuva_cafe image.jpg');
 
     background-size: cover;
-    background-position: center 20%;
+    background-position: center 60%;
     background-repeat: no-repeat;
 
     height: 63vh;
@@ -50,16 +52,29 @@ body {
 }
 
 
-.overlay-text h2 {
+.intro-bg .p-3 h2 {
     font-size: 1.5rem;
-    /* Bootstrapin oletus h4:n fonttikoko */
-    line-height: 1.2;
+    line-height: 2;
 }
+
+@media (max-width: 768px) {
+    .intro-bg .p-3 h2 {
+        font-size: 1rem;
+    }
+}
+
 
 /* Hero-osio */
 header {
     background-color: #FBF5F3;
     color: #0D160B;
+}
+
+/* Esittelyosion kuva */
+.esittely-bg{
+    background: url('esittelyosion\ kuva.jpg') center center no-repeat;
+    background-size: cover;
+    height: 400px;
 }
 
 /* Kortit */
