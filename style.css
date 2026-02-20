@@ -15,8 +15,18 @@ body {
 
 .nav-link,
 .navbar-brand {
+    font: 10.8rem;
     color: #0D160B !important;
 }
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+}
+
 
 /* Intro-taustakuva ennen Hero-osioa */
 .intro-bg {
