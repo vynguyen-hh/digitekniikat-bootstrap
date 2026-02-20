@@ -25,13 +25,15 @@
 </head>
 
 <body id="top" class="contact-page"><!-- id="top" tarvitaan takaisin alkuun -painikkeelle -->
+    <a href="#maincontent" class="skip-link">Siirry pääsisältöön</a>
 
-    <!-- Navigaatio (responsiivinen, sisältää hampurilaisvalikon) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <!-- Navigaatio (responsiivinen) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" role="navigation">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Café Rosaline</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Avaa navigaatio">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
@@ -43,88 +45,89 @@
         </div>
     </nav>
 
-    <!-- Hero-osio -->
-    <header class="bg-light text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Yhteystiedot</h1>
-            <p class="lead">Ota meihin yhteyttä tai varaa pöytä!</p>
-        </div>
-    </header>
-
-    <!-- Yhteystietojen osio -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Ota yhteyttä</h2>
-
-            <!-- Kontaktitiedot -->
-            <div class="row text-center mb-5">
-                <div class="col-md-4 mb-3">
-                    <h5>Puhelin</h5>
-                    <p>+358 40 123 4567</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Sähköposti</h5>
-                    <p>info@caferosaline.fi</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Instagram</h5>
-                    <p><a href="https://www.instagram.com" target="_blank"
-                            class="text-decoration-none">@caferosaline</a></p>
-                </div>
+    <main id="maincontent">
+        <!-- Hero-osio -->
+        <header class="bg-light text-center py-5">
+            <div class="container">
+                <h1 class="display-4">Yhteystiedot</h1>
+                <p class="lead">Ota meihin yhteyttä tai varaa pöytä!</p>
             </div>
+        </header>
 
-            <!-- Yhteydenottolomake -->
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card shadow-sm p-4">
-                        <h3 class="mb-3 text-center">Lähetä viesti</h3>
-                        <p class="text-center">Jos sinulla on kysyttävää tai haluat varata pöydän tai tapahtuman,
-                            täytä alla oleva lomake.
-                        </p>
+        <!-- Yhteystietojen osio -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Ota yhteyttä</h2>
 
-                        <!-- viestin vahvistus -->
-                        <div id="formAlert" class="alert alert-success d-none" role="alert">
-                            Kiitos viestistäsi! Otamme sinuun yhteyttä mahdollisimman pian.
+                <!-- Kontaktitiedot -->
+                <div class="row text-center mb-5">
+                    <div class="col-md-4 mb-3">
+                        <h5>Puhelin</h5>
+                        <p>+358 40 123 4567</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <h5>Sähköposti</h5>
+                        <p>info@caferosaline.fi</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <h5>Instagram</h5>
+                        <p><a href="https://www.instagram.com" target="_blank"
+                                class="text-decoration-none">@caferosaline</a></p>
+                    </div>
+                </div>
+
+                <!-- Yhteydenottolomake -->
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card shadow-sm p-4">
+                            <h3 class="mb-3 text-center">Lähetä viesti</h3>
+                            <p class="text-center">Jos sinulla on kysyttävää tai haluat varata pöydän tai tapahtuman,
+                                täytä alla oleva lomake.
+                            </p>
+
+                            <!-- viestin vahvistus -->
+                            <div id="formAlert" class="alert alert-success d-none" role="alert">
+                                Kiitos viestistäsi! Otamme sinuun yhteyttä mahdollisimman pian.
+                            </div>
+
+                            <form id="contactForm">
+                                <!-- Lomakekentät -->
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nimesi</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Kirjoita nimesi"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Sähköpostisi</label>
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="esim. nimi@sahko.fi" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Viesti</label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Kirjoita viestisi tähän..." required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-dark">Lähetä viesti</button>
+                                </div>
+                            </form>
                         </div>
-
-                        <form id="contactForm">
-                            <!-- Lomakekentät -->
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Nimesi</label>
-                                <input type="text" class="form-control" id="name" placeholder="Kirjoita nimesi"
-                                    required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Sähköpostisi</label>
-                                <input type="email" class="form-control" id="email" placeholder="esim. nimi@sahko.fi"
-                                    required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Viesti</label>
-                                <textarea class="form-control" id="message" rows="5"
-                                    placeholder="Kirjoita viestisi tähän..." required></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-dark">Lähetä viesti</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Aukioloajat -->
-    <section class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Aukioloajat</h2>
-            <p>Ma–Pe: 8.00–18.00</p>
-            <p>La: 9.00–17.00</p>
-            <p>Su: 10.00–16.00</p>
-        </div>
-    </section>
-
+        <!-- Aukioloajat -->
+        <section class="bg-light py-5">
+            <div class="container text-center">
+                <h2 class="mb-4">Aukioloajat</h2>
+                <p>Ma–Pe: 8.00–18.00</p>
+                <p>La: 9.00–17.00</p>
+                <p>Su: 10.00–16.00</p>
+            </div>
+        </section>
+    </main>
     <!-- Footer -->
     <footer class="text-center py-4">
         <div class="container">
@@ -132,18 +135,23 @@
         </div>
     </footer>
 
+    <!-- Extra Bootstrap-ominaisuus: Takaisin alkuun -painike -->
+    <button id="backToTop" class="btn btn-dark position-fixed" style="bottom: 20px; right: 20px; z-index: 9999;"
+        aria-label="Takaisin sivun alkuun">
+        ↑ <span aria-hidden="true">Takaisin alkuun</span>
+    </button>
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Optional: Back to top button – only run if the button exists
-            const backToTop = document.getElementById('backToTop');
-            if (backToTop) {
-                backToTop.addEventListener('click', () => {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            }
 
             // Yhteydenottolomakkeen lähetyksen vahvistus
             const contactForm = document.getElementById('contactForm');
@@ -151,10 +159,10 @@
 
             if (contactForm && formAlert) {
                 contactForm.addEventListener('submit', function (e) {
-                    e.preventDefault();                // estää sivun uudelleenlatauksen
-                    formAlert.classList.remove('d-none'); // näyttää alertin
-                    formAlert.scrollIntoView({ behavior: 'smooth' }); // skrollaa alertiin
-                    contactForm.reset();                // tyhjentää lomakkeen
+                    e.preventDefault();
+                    formAlert.classList.remove('d-none');
+                    formAlert.scrollIntoView({ behavior: 'smooth' });
+                    contactForm.reset();
                 });
             }
         });

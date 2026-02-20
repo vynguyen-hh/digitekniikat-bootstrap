@@ -25,13 +25,15 @@
 </head>
 
 <body id="top" class="contact-page"><!-- id="top" tarvitaan takaisin alkuun -painikkeelle -->
+    <a href="#maincontent" class="skip-link">Siirry pääsisältöön</a>
 
     <!-- Navigaatio (responsiivinen) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" role="navigation">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Café Rosaline</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Avaa navigaatio">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
@@ -43,95 +45,101 @@
         </div>
     </nav>
 
-    <!-- Taustakuva-osio ennen Heroa -->
-    <section class="intro-bg d-flex align-items-center justify-content-center text-center">
-        <div class="intro-overlay"></div>
-        <div class="overlay-text p-3">
-            <h1>Tervetuloa Café Rosalineen!</h1>
-            <h4>Tyylikäs kahvila Helsingin sydämessä</h4>
-        </div>
-    </section>
+    <main id="maincontent">
+        <!-- Taustakuva-osio ennen Heroa -->
+        <section class="intro-bg d-flex align-items-center justify-content-center text-center">
+            <div class="intro-overlay"></div>
+            <div class="overlay-text p-3">
+                <h1>Tervetuloa Café Rosalineen!</h1>
+                <h4>Tyylikäs kahvila Helsingin sydämessä</h4>
+            </div>
+        </section>
 
-    <!-- Hero-osio -->
-    <header class="bg-light text-center py-5">
-        <div class="container">
-            <p class="lead mt-3">
-                Nauti laadukkaasta erikoiskahvista, tuoreista artesaanileivonnaisista
-                ja rauhallisesta tunnelmasta keskellä kaupunkia.
-            </p>
-            <a href="menu.html" class="btn btn-dark mt-3">Tutustu menuun</a>
-        </div>
-    </header>
+        <!-- Hero-osio -->
+        <header class="bg-light text-center py-5">
+            <div class="container">
+                <p class="lead mt-3">
+                    Nauti laadukkaasta erikoiskahvista, tuoreista artesaanileivonnaisista
+                    ja rauhallisesta tunnelmasta keskellä kaupunkia.
+                </p>
+                <a href="menu.html" class="btn btn-dark mt-3">Tutustu menuun</a>
+            </div>
+        </header>
 
-    <!-- Esittelyosio -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="mb-4 text-center">Meistä</h2>
-            <p class="text-center">
-                Café Rosaline on tyylikäs ja viihtyisä kahvila Helsingin sydämessä.
-            <p class="text-center">
-                Kahvimme valmistetaan huolella valituista pavuista, ja leivonnaiset leivotaan paikan päällä joka päivä –
-                aina tuoreena.
-            </p>
-        </div>
-    </section>
+        <!-- Esittelyosio -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="mb-4 text-center">Meistä</h2>
+                <p class="text-center">
+                    Café Rosaline on tyylikäs ja viihtyisä kahvila Helsingin sydämessä.
+                </p>
+                <p class="text-center">
+                    Kahvimme valmistetaan huolella valituista pavuista, ja leivonnaiset leivotaan paikan päällä joka
+                    päivä –
+                    aina tuoreena.
+                </p>
+            </div>
+        </section>
 
-    <!-- Kortit suosituista tuotteista -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Suosituimmat tuotteet</h2>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="latte.jpg" class="card-img-top" alt="Latte" style="height: 250px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Latte</h5>
-                            <p class="card-text">Kermainen latte, saatavilla myös kasvipohjaisena</p>
+        <!-- Kortit suosituista tuotteista -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Suosituimmat tuotteet</h2>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="latte.jpg" class="card-img-top" alt="Latte"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Latte</h5>
+                                <p class="card-text">Kermainen latte, saatavilla myös kasvipohjaisena</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="croissant.jpg" class="card-img-top" alt="Croissant"
-                            style="height: 250px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Croissant</h5>
-                            <p class="card-text">Tuore ja voinen croissant, täydellinen aamupalalle</p>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="croissant.jpg" class="card-img-top" alt="Croissant"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Croissant</h5>
+                                <p class="card-text">Tuore ja voinen croissant, täydellinen aamupalalle</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="mocha.jpg" class="card-img-top" alt="Mocha" style="height: 250px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Mocha</h5>
-                            <p class="card-text">Suklainen mocha kahvilla ja vaahdolla</p>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="mocha.jpg" class="card-img-top" alt="Mocha"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Mocha</h5>
+                                <p class="card-text">Suklainen mocha kahvilla ja vaahdolla</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="smoothie.jpg" class="card-img-top" alt="Smoothie"
-                            style="height: 250px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Smoothie</h5>
-                            <p class="card-text">Tuoreet smoothiet, valikoima erilaisia makuja</p>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="smoothie.jpg" class="card-img-top" alt="Smoothie"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Smoothie</h5>
+                                <p class="card-text">Tuoreet smoothiet, valikoima erilaisia makuja</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Aukioloajat -->
-    <section class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Aukioloajat</h2>
-            <p>Ma–Pe: 8.00–18.00</p>
-            <p>La: 9.00–17.00</p>
-            <p>Su: 10.00–16.00</p>
-        </div>
-    </section>
+        <!-- Aukioloajat -->
+        <section class="bg-light py-5">
+            <div class="container text-center">
+                <h2 class="mb-4">Aukioloajat</h2>
+                <p>Ma–Pe: 8.00–18.00</p>
+                <p>La: 9.00–17.00</p>
+                <p>Su: 10.00–16.00</p>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="text-center py-4">
@@ -141,8 +149,10 @@
     </footer>
 
     <!-- Extra Bootstrap-ominaisuus: Takaisin alkuun -painike -->
-    <button id="backToTop" class="btn btn-dark position-fixed" style="bottom: 20px; right: 20px; z-index: 9999;">↑
-        Takaisin alkuun</button>
+    <button id="backToTop" class="btn btn-dark position-fixed" style="bottom: 20px; right: 20px; z-index: 9999;"
+        aria-label="Takaisin sivun alkuun">
+        ↑ <span aria-hidden="true">Takaisin alkuun</span>
+    </button>
     <script>
         const backToTop = document.getElementById('backToTop');
         backToTop.addEventListener('click', () => {
